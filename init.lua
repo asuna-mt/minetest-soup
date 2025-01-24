@@ -1,15 +1,7 @@
 -- Soup items
-minetest.register_craftitem("soup:tomato_soup", {
-    description = "Tomato Soup",
-    inventory_image = "tomato_soup.png",
-    on_use = minetest.item_eat(5,"ethereal:bowl"),
-})
+minetest.register_alias("soup:tomato_soup","farming:tomato_soup")
 
-minetest.register_craftitem("soup:mushroom_soup", {
-    description = "Mushroom Soup",
-    inventory_image = "mushroom_soup.png",
-    on_use = minetest.item_eat(5,"ethereal:bowl"),
-})
+minetest.register_alias("soup:mushroom_soup","ethereal:mushroom_soup")
 
 minetest.register_craftitem("soup:chicken_noodle_soup", {
     description = "Chicken Noodle Soup",
@@ -18,24 +10,6 @@ minetest.register_craftitem("soup:chicken_noodle_soup", {
 })
 
 -- Soup recipes
-minetest.register_craft({
-	output = "soup:tomato_soup",
-	recipe = {
-		{"farming:tomato","farming:tomato", "farming:tomato"},
-		{"","bottles:bottle_of_water", ""},
-		{"","group:food_bowl", ""}
-	}
-})
-
-minetest.register_craft({
-	output = "soup:mushroom_soup",
-	recipe = {
-		{"group:food_mushroom","group:food_mushroom", "group:food_mushroom"},
-		{"","bottles:bottle_of_water", ""},
-		{"","group:food_bowl", ""}
-	}
-})
-
 minetest.register_craft({
 	output = "soup:chicken_noodle_soup",
 	recipe = {
